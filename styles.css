@@ -1,0 +1,156 @@
+img#headerphoto,
+img#footerphoto {
+  width: 50vw;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+body {
+  background-color: rgba(240, 248, 255, 0.616);
+  margin: 0;
+}
+div#aboutme {
+  border: 1px solid green;
+  font-family: "Montserrat", serif;
+}
+div#aboutme::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h2 {
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  font-weight: 550;
+  border: 1px solid pink;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+p {
+  font-size: 1.5vw;
+  font-family: "Montserrat", serif;
+  color: rgba(0, 0, 0, 0.822);
+}
+
+img#headerphoto {
+  float: left;
+}
+footer {
+  display: flex;
+  gap: 45px;
+  border: 2px solid brown;
+  background-color: rgba(64, 167, 145, 0.986);
+  padding: 50px;
+  padding-left: 70px;
+  padding-right: 20px;
+}
+
+div#contactinfo {
+  border: 1px solid red;
+  color: white;
+  font-size: 2vw;
+  padding-bottom: 20px;
+  padding-top: 0px;
+  font-family: "Montserrat", serif;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex-shrink: 0;
+  width: 40vw;
+}
+#floatingname {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 7vw;
+  font-weight: 350;
+  position: relative;
+  bottom: 9vw;
+  left: 6.4vw;
+  letter-spacing: 0.6vw;
+  /* color: rgb(172, 32, 32); */
+  color: brown;
+}
+div#callinfo {
+  border: 1px solid yellow;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+div#emailinfo {
+  border: 1px solid purple;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+div#social {
+  border: 1px solid pink;
+  display: flex;
+  gap: 25px;
+}
+
+div#social > img {
+  height: 3.3vw;
+  width: 3.3vw;
+  cursor: pointer;
+}
+
+svg {
+  height: 2.9vw;
+  width: 2.9vw;
+}
+
+/* @media (max-width: 550px) {
+  img#headerphoto {
+    width: 90vw;
+  }
+  img#footerphoto {
+    width: 100vw;
+  }
+} */
+img#footerphoto {
+  width: 40vw;
+  height: 43.85vw;
+
+  object-fit: cover;
+  object-position: 0% 5%;
+}
+
+@media (max-width: 1000px) {
+  div#contactinfo {
+    font-size: 3vw;
+  }
+  img#footerphoto {
+    width: 38vw;
+    height: 70vw;
+  }
+}
+
+@media (max-width: 550px) {
+  footer {
+    flex-direction: column;
+    gap: 0px;
+    padding: 0px;
+  }
+  img#footerphoto {
+    width: 100vw;
+    height: auto;
+  }
+
+  div#contactinfo {
+    align-items: start;
+    width: auto;
+    gap: 20px;
+    padding-bottom: 30px;
+    font-size: 4vw;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  div#social > img {
+    height: 6.3vw;
+    width: 6.3vw;
+    cursor: pointer;
+  }
+}

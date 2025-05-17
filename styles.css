@@ -6,7 +6,7 @@ img#footerphoto {
 }
 
 body {
-  background-color: rgba(240, 248, 255, 0.616);
+  background-color: rgba(240, 248, 255, 0.541);
   margin: 0;
 }
 div#aboutme {
@@ -28,7 +28,7 @@ h2 {
 }
 
 p {
-  font-size: 1.5vw;
+  font-size: 2vw;
   font-family: "Montserrat", serif;
   color: rgba(0, 0, 0, 0.822);
 }
@@ -36,6 +36,125 @@ p {
 img#headerphoto {
   float: left;
 }
+#floatingname {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 7vw;
+  font-weight: 350;
+  position: relative;
+  bottom: 9vw;
+  left: 6.4vw;
+  letter-spacing: 0.6vw;
+  /* color: rgb(172, 32, 32); */
+  color: brown;
+}
+
+div#cardcontainer {
+  margin: 49px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3vw;
+  justify-content: center;
+  /* border: 1px solid blue; */
+}
+
+div#card {
+  display: flex;
+  width: 27.8vw;
+  flex-direction: column;
+  font-size: 1.85vw;
+  font-family: "Montserrat", serif;
+  padding-bottom: 4vw;
+  background-color: whitesmoke;
+
+  gap: 10px;
+  /* border: 1px solid brown; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+div#card > img {
+  cursor: pointer;
+}
+div#name {
+  font-size: 2.95vw;
+  font-family: "Rajdhani", serif;
+}
+div#projectname > img,
+div#projectname > svg {
+  width: 2.4vw;
+  height: 2.4vw;
+}
+@media (max-width: 1000px) {
+  div#card {
+    width: 41vw;
+    font-size: 3vw;
+    padding-bottom: 6vw;
+  }
+  div#name {
+    font-size: 4.6vw;
+  }
+  div#projectname > img,
+  div#projectname > svg {
+    width: 3.9vw;
+    height: 3.9vw;
+  }
+
+  div#cardcontainer {
+    gap: 4vw;
+    margin: 35px;
+    margin-bottom: 100px;
+  }
+}
+div#summary {
+  color: rgba(0, 0, 0, 0.822);
+  /* border: 1px solid yellow; */
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+div#projectname {
+  display: flex;
+  /* border: 1px solid green; */
+  gap: 10px;
+  align-items: center;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+@media (max-width: 550px) {
+  div#card {
+    width: 85vw;
+    font-size: 5vw;
+    padding-bottom: 8vw;
+  }
+  div#name {
+    font-size: 8.4vw;
+  }
+  div#projectname > img,
+  div#projectname > svg {
+    width: 7vw;
+    height: 7vw;
+  }
+  div#cardcontainer {
+    gap: 14.3vw;
+    margin: 20px;
+    margin-bottom: 100px;
+  }
+  div#projectname,
+  div#summary {
+    padding-left: 3.5vw;
+    padding-right: 3.5vw;
+  }
+  div#projectname {
+    padding-left: 5.5vw;
+  }
+}
+
+div#name {
+  margin-right: auto;
+}
+
+div#card > img {
+  height: auto;
+}
+
 footer {
   display: flex;
   gap: 45px;
@@ -59,17 +178,7 @@ div#contactinfo {
   flex-shrink: 0;
   width: 40vw;
 }
-#floatingname {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 7vw;
-  font-weight: 350;
-  position: relative;
-  bottom: 9vw;
-  left: 6.4vw;
-  letter-spacing: 0.6vw;
-  /* color: rgb(172, 32, 32); */
-  color: brown;
-}
+
 div#callinfo {
   border: 1px solid yellow;
   text-align: start;
@@ -95,7 +204,8 @@ div#social > img {
   cursor: pointer;
 }
 
-svg {
+div#callinfo > svg,
+div#emailinfo > svg {
   height: 2.9vw;
   width: 2.9vw;
 }
@@ -138,19 +248,33 @@ img#footerphoto {
   }
 
   div#contactinfo {
-    align-items: start;
+    align-items: center;
     width: auto;
     gap: 20px;
     padding-bottom: 30px;
-    font-size: 4vw;
+    font-size: 5vw;
     padding-top: 30px;
     padding-left: 20px;
     padding-right: 20px;
   }
 
   div#social > img {
-    height: 6.3vw;
-    width: 6.3vw;
+    height: 7.3vw;
+    width: 7.3vw;
     cursor: pointer;
+  }
+  div#address {
+    align-self: start;
+  }
+  div#callinfo {
+    align-self: start;
+  }
+  div#emailinfo {
+    align-self: start;
+  }
+  div#callinfo > svg,
+  div#emailinfo > svg {
+    height: 6vw;
+    width: 6.3vw;
   }
 }

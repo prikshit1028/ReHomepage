@@ -9,9 +9,37 @@ body {
   background-color: rgba(240, 248, 255, 0.541);
   margin: 0;
 }
+
+header {
+  border: 1px solid purple;
+  padding-left: 4.9vw;
+  padding-right: 4.9vw;
+  padding-top: 5vw;
+}
+h1 {
+  /* margin-top: 0px;*/
+  margin-bottom: 0px;
+}
 div#aboutme {
+  padding-top: 9vw;
   border: 1px solid green;
   font-family: "Montserrat", serif;
+}
+div#bio {
+  /* border: 1px solid orange; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* display: flex;
+  flex-direction: column; */
+}
+div#socialnetworking > img {
+  height: 2vw;
+  width: 2vw;
+}
+div#socialnetworking {
+  border: 1px solid blueviolet;
+  display: flex;
+  gap: 0.5vw;
+  justify-content: end;
 }
 div#aboutme::after {
   content: "";
@@ -40,16 +68,24 @@ img#headerphoto {
   font-family: "Cormorant Garamond", serif;
   font-size: 7vw;
   font-weight: 350;
-  position: relative;
+  /* position: relative;
   bottom: 9vw;
-  left: 6.4vw;
+  left: 6.4vw; */
   letter-spacing: 0.6vw;
   /* color: rgb(172, 32, 32); */
   color: brown;
 }
-
+div#mywork {
+  margin-left: 5.2vw;
+  margin-bottom: 1.2vw;
+  letter-spacing: 0.22vw;
+  /* border: 1px solid red; */
+  font-size: 4vw;
+  font-family: "Libre Caslon Display", serif;
+}
 div#cardcontainer {
   margin: 49px;
+  margin-top: 0px;
   display: flex;
   flex-wrap: wrap;
   gap: 3vw;
@@ -84,6 +120,10 @@ div#projectname > svg {
   height: 2.4vw;
 }
 @media (max-width: 1000px) {
+  div#mywork {
+    margin-left: 6.85vw;
+    font-size: 6vw;
+  }
   div#card {
     width: 41vw;
     font-size: 3vw;
@@ -101,6 +141,7 @@ div#projectname > svg {
   div#cardcontainer {
     gap: 4vw;
     margin: 35px;
+    margin-top: 0px;
     margin-bottom: 100px;
   }
 }
@@ -119,6 +160,14 @@ div#projectname {
   padding-right: 1vw;
 }
 @media (max-width: 550px) {
+  div#mywork {
+    margin-left: 7.37vw;
+    margin-right: 7.37vw;
+    margin-bottom: 4.7vw;
+
+    text-align: center;
+    font-size: 11vw;
+  }
   div#card {
     width: 85vw;
     font-size: 5vw;
@@ -135,6 +184,7 @@ div#projectname {
   div#cardcontainer {
     gap: 14.3vw;
     margin: 20px;
+    margin-top: 0px;
     margin-bottom: 100px;
   }
   div#projectname,

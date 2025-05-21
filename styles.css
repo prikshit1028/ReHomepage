@@ -7,6 +7,9 @@ img#footerphoto {
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
+html {
+  overflow-x: hidden;
+}
 img#headerphoto {
   height: 37.5vw;
   object-fit: cover;
@@ -15,32 +18,52 @@ img#headerphoto {
 }
 body {
   margin: 0;
+  max-width: 100%;
   /* background-image: url('data:image/svg+xml,<svg width="1000px" height="1000px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(0)matrix(1, 0, 0, -1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M6 7C6 6.44772 6.44772 6 7 6H41C41.5523 6 42 6.44772 42 7V41C42 41.5523 41.5523 42 41 42H7C6.44772 42 6 41.5523 6 41V7Z" fill="%235e93e8"></path></g></svg>');
   background-repeat: no-repeat;
   background-size: 1500px 1500px; */
-  /* background: transparent; */
-  /* position: relative; */
+  background: transparent;
+  overflow-x: hidden;
+  width: 100vw;
+  position: relative;
 
-  background-color: rgba(240, 248, 255, 0.459);
-  /* background-color: white; */
+  /* background-color: rgba(240, 248, 255, 0.459); */
 }
-/* 
+
 body::before {
   content: "";
   background-repeat: no-repeat;
   position: absolute;
   width: 100px;
   height: 100px;
-  top: -750px;
-  left: 780px;
-
-  
+  /* top: -29.5vw; */
+  top: -400px;
+  left: 62vw;
 
   z-index: -1;
-  transform: rotate(78deg) scale(22.5);
+  transform: rotate(79deg) scale(15, 48);
 
   background-image: url('data:image/svg+xml,<svg width="256px" height="256px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(0)matrix(1, 0, 0, -1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M6 7C6 6.44772 6.44772 6 7 6H41C41.5523 6 42 6.44772 42 7V41C42 41.5523 41.5523 42 41 42H7C6.44772 42 6 41.5523 6 41V7Z" fill="%235e93e8"></path></g></svg>');
-} */
+}
+
+@media (max-width: 1272px) {
+  body::before {
+    /* top: -46vw; */
+    top: -480px;
+  }
+}
+@media (max-width: 1000px) {
+  body::before {
+    top: -495px;
+    transform: rotate(77.5deg) scale(15, 48);
+  }
+}
+@media (max-width: 550px) {
+  body::before {
+    top: -625px;
+    transform: rotate(64.5deg) scale(15, 48);
+  }
+}
 
 header {
   /* border: 1px solid purple; */
@@ -71,6 +94,7 @@ div#bio {
   /* margin-left: 40vw; */
   /* padding-left: 41.5vw;*/
   padding-right: 1.1vw;
+  background-color: rgba(255, 255, 255, 0.966);
   /* background-color: rgba(255, 255, 255, 0.973); */
 
   /* background-color: rgb(240, 248, 255); */
@@ -118,7 +142,10 @@ img#headerphoto {
   position: absolute;
   left: 7.2vw;
   top: 33.4vw;
+  /* border: 1px solid red; */
+  /* display: flex; */
   /* position: relative;
+  
   bottom: 9vw;
   left: 6.4vw; */
   letter-spacing: 0.6vw;
@@ -165,10 +192,16 @@ img#headerphoto {
 
 @media (max-width: 550px) {
   #floatingname {
-    top: 76.5vw;
-    left: 14.5vw;
-    font-size: 13.2vw;
-    letter-spacing: 1vw;
+    transform: scale(1.05);
+    line-height: 1;
+    padding: 0px;
+    text-align: start;
+    width: 49vw;
+    top: 62.9vw;
+    left: 16vw;
+    font-size: 14.5vw;
+    letter-spacing: 2vw;
+    display: inline-block;
   }
 
   div#aboutme {
@@ -200,13 +233,16 @@ img#headerphoto {
   div#socialnetworking {
     justify-content: center;
     gap: 5vw;
+    padding-right: 0;
   }
+
   div#bio {
     text-align: center;
     margin-left: 0;
     padding-left: 1vw;
     padding-right: 1vw;
     box-shadow: none;
+    background-color: transparent;
   }
 }
 
@@ -237,9 +273,10 @@ div#card {
   font-family: "Montserrat", serif;
   padding-bottom: 4vw;
   /*this is the original color option */
-  background-color: rgba(245, 245, 245, 0.664);
+  /* background-color: rgba(245, 245, 245, 0.664); */
   /* this is the new color option for accommodating background-image */
-  /* background-color: rgba(228, 228, 205, 0.281); */
+  background-color: rgba(228, 228, 205, 0.281);
+  /* background-color: azure; */
 
   gap: 10px;
   /* border: 1px solid brown; */
@@ -347,7 +384,7 @@ div#card > img {
 footer {
   display: flex;
   gap: 45px;
-  border: 2px solid brown;
+  /* border: 2px solid brown; */
   background-color: rgba(64, 167, 145, 0.986);
   padding: 50px;
   padding-left: 70px;
@@ -355,7 +392,7 @@ footer {
 }
 
 div#contactinfo {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   color: white;
   font-size: 2vw;
   padding-bottom: 20px;
@@ -363,41 +400,45 @@ div#contactinfo {
   font-family: "Montserrat", serif;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 3vw;
   flex-shrink: 0;
-  width: 40vw;
+  width: 41vw;
 }
 
 h2 {
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
   font-weight: 550;
-  border: 1px solid pink;
+  /* border: 1px solid pink; */
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: -1vw;
 }
 
 div#callinfo {
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   text-align: start;
   display: flex;
   align-items: center;
   gap: 15px;
 }
 div#emailinfo {
-  border: 1px solid purple;
+  /* border: 1px solid purple; */
   display: flex;
   align-items: center;
-  gap: 17px;
+  gap: 14.5px;
+}
+
+#emailicon {
+  overflow: visible;
 }
 div#social {
-  border: 1px solid pink;
+  /* border: 1px solid pink; */
   display: flex;
   gap: 25px;
 }
 
 div#social > img {
-  height: 3.3vw;
-  width: 3.3vw;
+  height: 3.17vw;
+  width: 3.17vw;
   cursor: pointer;
 }
 
@@ -426,10 +467,22 @@ img#footerphoto {
 @media (max-width: 1000px) {
   div#contactinfo {
     font-size: 3vw;
+    gap: 4vw;
+  }
+  footer {
+    padding-left: 49px;
+  }
+  h2 {
+    padding-top: 6.5vw;
   }
   img#footerphoto {
     width: 38vw;
     height: 70vw;
+  }
+  div#callinfo > svg,
+  div#emailinfo > svg {
+    height: 3.2vw;
+    width: 3.2vw;
   }
 }
 
@@ -456,8 +509,8 @@ img#footerphoto {
   }
 
   div#social > img {
-    height: 7.3vw;
-    width: 7.3vw;
+    height: 7.4vw;
+    width: 7.4vw;
     cursor: pointer;
   }
   div#address {
